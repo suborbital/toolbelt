@@ -1,13 +1,13 @@
-FROM golang:1.18-alpine
+FROM golang:1.18
 
-RUN apk update
-RUN apk upgrade --available
-RUN apk --no-cache add curl
+RUN apt update
+RUN apt upgrade -y
 
-RUN addgroup -S masons -g 433 && \
-    adduser -S bricklayer -G masons -u 431
+RUN groupadd -r masons -g 433 \
+    && useradd bricklayer -G masons -u 431
 
 USER bricklayer
+WORKDIR /home/bricklayer
 
 # Install golangci-lint v1.45.2. Check latest version available here
 # @see https://github.com/golangci/golangci-lint/releases

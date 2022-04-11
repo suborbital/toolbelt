@@ -5,4 +5,4 @@ build:
 	docker tag gabor/toolbox gabor/toolbox:$(short)
 
 run:
-	docker run -it gabor/toolbox:utility /bin/sh
+	docker run -it gabor/toolbox:latest /bin/sh
