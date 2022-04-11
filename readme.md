@@ -4,7 +4,7 @@
 
 Across all of our projects we have a few common tasks we need to do with every one of our projects:
 * run golangci-lint
-* fix up some code that makes the linter unhapy
+* fix up some code that makes the linter unhappy
 * build the project binary
 
 This docker image can take care of all of these things.
