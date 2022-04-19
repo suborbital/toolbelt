@@ -17,6 +17,10 @@ RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/i
 # @see https://github.com/daixiang0/gci/releases
 RUN go install github.com/daixiang0/gci@v0.3.3
 
+# Install vektra/mockery v2.11.0. Check the latest version available here:
+# @see https://github.com/vektra/mockery/releases
+RUN go install github.com/vektra/mockery/v2@v2.11.0
+
 RUN golangci-lint --version || exit 1
 RUN gci --version || exit 1
-
+RUN mockery --version || exit 1
