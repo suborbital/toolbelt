@@ -31,7 +31,7 @@ jobs:
           tags: |
             type=sha,enable=true
           flavor: |
-            latest=auto
+            latest=true
       - uses: docker/build-push-action@v2
         with:
           cache-from: type=gha
